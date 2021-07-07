@@ -1897,10 +1897,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      supportedCurrencies: ['USD', 'EUR', 'AUD'],
+      supportedCurrencies: false,
       conversionRates: [],
-      currencyFrom: 'EUR',
-      currencyTo: 'USD',
+      currencyFrom: false,
+      currencyTo: false,
       currencyFromAmount: '',
       currencyToAmount: '',
       conversionResult: false,
@@ -1932,10 +1932,9 @@ __webpack_require__.r(__webpack_exports__);
     axios.get(this.apiUrl + 'conversionRates').then(function (response) {
       _this.supportedCurrencies = response.data.currencies;
       _this.conversionRates = response.data.rates;
-    })["catch"](function (error) {
-      console.log(error);
-    })["finally"](function () {
-      return console.log('all done');
+      _this.currencyFrom = _this.supportedCurrencies[_this.supportedCurrencies.indexOf('EUR')];
+      _this.currencyTo = _this.supportedCurrencies[_this.supportedCurrencies.indexOf('USD')];
+    })["catch"](function (error) {// we can console.log the error or whatever else we need
     });
   },
   watch: {

@@ -51,10 +51,10 @@
     export default {
         data: function () {
             return {
-                supportedCurrencies: ['USD', 'EUR', 'AUD'],
+                supportedCurrencies: false,
                 conversionRates: [],
-                currencyFrom: 'EUR',
-                currencyTo: 'USD',
+                currencyFrom: false,
+                currencyTo: false,
                 currencyFromAmount: '',
                 currencyToAmount: '',
                 conversionResult: false,
@@ -85,11 +85,13 @@
                 .then(response => {
                     this.supportedCurrencies = response.data.currencies;
                     this.conversionRates = response.data.rates;
+
+                    this.currencyFrom = this.supportedCurrencies[this.supportedCurrencies.indexOf('EUR')];
+                    this.currencyTo = this.supportedCurrencies[this.supportedCurrencies.indexOf('USD')];
                 })
                 .catch(error => {
-                    console.log(error)
+                    // we can console.log the error or whatever else we need
                 })
-                .finally(() => console.log('all done'))
         },
 
         watch: {
