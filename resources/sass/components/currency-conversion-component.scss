@@ -1,0 +1,35 @@
+.currency-conversion-component {
+
+    border-radius: 5%;
+
+    .card-header {
+        padding: 20px 0;
+        font-size: 2em;
+        color: $blue;
+        background: transparent;
+    }
+
+    .card-body {
+        padding: 80px 40px;
+    }
+
+    .form-control {
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid lighten(blue, 30%);
+        font-size: 1.1em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        &:focus {
+            box-shadow: none;
+            border-bottom: 2px solid lighten(blue, 10%);
+        }
+
+    }
+
+    input {
+        padding: 18px 0;
+    }
+
+}

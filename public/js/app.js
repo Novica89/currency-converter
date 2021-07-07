@@ -1892,6 +1892,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -37505,16 +37507,14 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-6" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header text-center" }, [
-            _vm._v("Currency converter component")
-          ]),
+        _c("div", { staticClass: "card currency-conversion-component" }, [
+          _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "form-row" }, [
-              _c("div", { staticClass: "col-md-10 offset-md-1" }, [
+              _c("div", { staticClass: "col-xs-12 col-md-12" }, [
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "form-group col-md-6" }, [
+                  _c("div", { staticClass: "form-group col" }, [
                     _c("input", {
                       directives: [
                         {
@@ -37547,7 +37547,7 @@ var render = function() {
                     })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "form-group col-md-6" }, [
+                  _c("div", { staticClass: "form-group col" }, [
                     _c(
                       "select",
                       {
@@ -37602,10 +37602,12 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
+            _c("hr"),
+            _vm._v(" "),
             _c("div", { staticClass: "form-row" }, [
-              _c("div", { staticClass: "col-md-10 offset-md-1" }, [
+              _c("div", { staticClass: "col-xs-12 col-md-12" }, [
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "form-group col-md-6" }, [
+                  _c("div", { staticClass: "form-group col" }, [
                     _c("input", {
                       directives: [
                         {
@@ -37638,7 +37640,7 @@ var render = function() {
                     })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "form-group col-md-6" }, [
+                  _c("div", { staticClass: "form-group col" }, [
                     _c(
                       "select",
                       {
@@ -37692,13 +37694,27 @@ var render = function() {
                 ])
               ])
             ])
+          ]),
+          _vm._v(" "),
+          _c("small", { staticClass: "text-center pb-2" }, [
+            _vm._v("Made with love in 2021")
           ])
         ])
       ])
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header text-center" }, [
+      _c("i", { staticClass: "fas fa-balance-scale-left" }),
+      _vm._v(" Convert away")
+    ])
+  }
+]
 render._withStripped = true
 
 

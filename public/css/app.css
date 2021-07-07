@@ -10002,3 +10002,30 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.currency-conversion-component {
+  border-radius: 5%;
+}
+.currency-conversion-component .card-header {
+  padding: 20px 0;
+  font-size: 2em;
+  color: #3490dc;
+  background: transparent;
+}
+.currency-conversion-component .card-body {
+  padding: 80px 40px;
+}
+.currency-conversion-component .form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #9999ff;
+  font-size: 1.1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.currency-conversion-component .form-control:focus {
+  box-shadow: none;
+  border-bottom: 2px solid #3333ff;
+}
+.currency-conversion-component input {
+  padding: 18px 0;
+}

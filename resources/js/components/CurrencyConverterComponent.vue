@@ -2,33 +2,33 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header text-center">Currency converter component</div>
+                <div class="card currency-conversion-component">
+                    <div class="card-header text-center"><i class="fas fa-balance-scale-left"></i> Convert away</div>
 
                     <div class="card-body">
                         <div class="form-row">
-                            <div class="col-md-10 offset-md-1">
+                            <div class="col-xs-12 col-md-12">
                                 <div class="row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col">
                                         <input type="text" class="form-control" id="currencyFromAmount" v-model="currencyFromAmount" @input="convertCurrencies()" placeholder="amount...">
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col">
                                         <select id="currencyFrom" class="form-control" @change="convertCurrencies()" v-model="currencyFrom">
                                             <option value="default">Convert from...</option>
                                             <option v-for="currency in supportedCurrencies" :value="currency">{{ currency }}</option>
                                         </select>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
+                        <hr>
                         <div class="form-row">
-                            <div class="col-md-10 offset-md-1">
+                            <div class="col-xs-12 col-md-12">
                                 <div class="row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col">
                                         <input type="text" class="form-control" id="currencyToAmount" v-model="currencyToAmount" @input="convertCurrencies('to')" placeholder="amount...">
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col">
                                         <select id="currencyTo" class="form-control" @change="convertCurrencies()" v-model="currencyTo">
                                             <option value="default">Convert to...</option>
                                             <option  v-for="currency in supportedCurrencies" :value="currency">{{ currency }}</option>
@@ -38,6 +38,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <small class="text-center pb-2">Made with love in 2021</small>
 
                 </div>
             </div>
