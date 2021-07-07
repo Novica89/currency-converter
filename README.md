@@ -9,6 +9,11 @@ This is a very simple, but fully working currency conversion app made with Larav
 ## Setting the project up
 - Clone the repo
 - Make sure to do `composer install` and `npm install && npm run dev` to install front end libraries and compile all assets
+- Create a database and name it however you want
+- create an `.env` file inside the project root folder and copy over the contents of the `.env.example` to it, then update database
+  information to match your own.
+- Run `php artisan migrate` in the CLI to migrate DB tables
+- Run `php artisan key:generate` to generate app key
 - Change the `apiUrl` property of `AppConfig` object to the correct API url of your own backend inside of `resources/js/bootstrap.js` file.
 The code block looks like this 
   ```
@@ -17,11 +22,11 @@ The code block looks like this
     }
   ```
 - Recompile all the assets again after these changes with `npm run dev`.
-- If you want a real time compilation, run `npm run watch`
 - You would need to run the Command that actually fetches current currencies and their exchange rates once before using the app
   (since the app requires them in order to function). To do this, the easiest way possible would be just to run `php artisan currency:refresh-rates`
-  inside of the CLI. This command can be run in the same away, whenever you want to update currencies and their rates (it's been scheduled 
+  inside of the CLI. This command can be run in the same away, whenever you want to update currencies and their rates (it's been scheduled
   to run every 6 hours by default - read 'Project defaults' section for more info on this)
+- If you want a real time compilation, run `npm run watch`
 
 ## Project defaults
 - Project is made with a thought in mind that the best way to fetch currencies and conversion rates is to have a Command class that does this
